@@ -8,6 +8,7 @@ class Timer {
     this.startButton.addEventListener("click", this.start);
     this.pauseButton.addEventListener("click", this.pause);
   }
+  //add this line
   //we use arrow function bc we alwaus want to point to this inside class.is wen doesnt want
   //to usea rrow fucnion we can use bind(this ) after this.start in the adddeventlistener.
   start = () => {
