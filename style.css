@@ -1,0 +1,71 @@
+dial {
+  height: 400px;
+  width: 400px;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #06bcc1;
+}
+.timer-container {
+  position: relative;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+* {
+  font: inherit;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f4edea;
+}
+
+.timer-container input {
+  display: block;
+  border: none;
+  width: 240px;
+  font-size: 90px;
+  text-align: center;
+  background-color: #f4edea;
+  color: #12263a;
+}
+
+.timer-container button {
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #f4d1ae;
+}
+#reset {
+  color: #12263a;
+}
+
+.control-play-stop :nth-child(-n + 2):hover {
+  color: #12263a;
+}
+
+.timer button:focus {
+  outline: none;
+}
+
+.timer input:focus {
+  outline: none;
+}
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
