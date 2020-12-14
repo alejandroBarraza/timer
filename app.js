@@ -15,7 +15,7 @@ circle.setAttribute("stroke-dasharray", perimeter);
 let duration = 0;
 let currentOffset = 0;
 let paused = false;
-console.log("pase por aki"); //draw the full circle
+//draw the full circle
 const timer = new Timer(
   durationInput,
   startButton,
@@ -27,21 +27,16 @@ const timer = new Timer(
       duration = timeStart;
     },
     onTick() {
-      //calculate currentofset for matching with each tick.
-      //console.log(currentOffset);
+      //calculate currentofset for matching for each tick.
       currentOffset = (perimeter * timer.timeRemaining) / duration - perimeter;
-      let alert = perimeter * 0.25;
-
-      if (currentOffset > alert) {
-        circle.setAttribute("stroke", "red");
+      //set limit to 3/4 of pertimer and if currentoffset is grather than 70% perimter change color to navy-blue
+      let limit = perimeter * 0.7;
+      if (Math.abs(currentOffset) > limit) {
+        circle.setAttribute("stroke", "#12263a");
       }
-      console.log(`bengo despues ${currentOffset}`);
+
+      //set atribute to stroke-dashoffset with current stroke-dashoffset.
       circle.setAttribute("stroke-dashoffset", currentOffset);
-
-      //menos un pixel cada tick
-      //went strat we want dasharay=perimeter and at finish dashoffset = perimeter *-1
-
-      //console.log("timer has ticked down. (callback)");
     },
     onComplete() {
       console.log("time has complete.");
