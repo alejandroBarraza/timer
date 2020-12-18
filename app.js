@@ -1,5 +1,5 @@
 //declare the three querySelector from play,stop and input.
-//
+//new stuff for add.
 const durationInput = document.querySelector("#duration"); //select the input from timer.
 const startButton = document.querySelector("#start"); //select the start button
 const pauseButton = document.querySelector("#pause"); //select the pause botton
