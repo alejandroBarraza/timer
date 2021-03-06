@@ -11,28 +11,35 @@
     <title>Timer</title>
   </head>
   <body>
-    <h1>timer</h1>
-    <div class="timer-container">
-      <div class="controls">
-        <input id="duration" value="10" />
-        <div class="control-play-stop">
-          <button id="start"><i class="fas fa-play"></i></button>
-          <button id="pause"><i class="fas fa-pause"></i></button>
-          <button id="reset"><i class="fas fa-redo"></i></button>
+    <main>
+      <section class="wrapper-timer">
+        <h1>timer</h1>
+        <div class="timer-container">
+          <div class="controls">
+            <input id="duration" value="10" />
+            <div class="control-play-stop">
+              <button id="start"><i class="fas fa-play"></i></button>
+              <button id="pause"><i class="fas fa-pause"></i></button>
+              <button id="reset"><i class="fas fa-redo"></i></button>
+            </div>
+          </div>
+          <svg height="400" , width="400">
+            <circle
+              r="190"
+              cx="200"
+              cy="200"
+              fill="transparent"
+              stroke="#06bcc1"
+              stroke-width="15"
+              transform="rotate(-90,200,200)"
+            />
+          </svg>
         </div>
-      </div>
-      <svg height="400" , width="400">
-        <circle
-          r="190"
-          cx="200"
-          cy="200"
-          fill="transparent"
-          stroke="#06bcc1"
-          stroke-width="15"
-          transform="rotate(-90,200,200)"
-        />
-      </svg>
-    </div>
+      </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
     <script src="timer.js"></script>
     <script src="app.js"></script>
   </body>

@@ -25,9 +25,9 @@ h1 {
 }
 
 body {
-  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans",
-    "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #f4edea;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* background-color: #f4edea; */
 }
 
 .timer-container input {
@@ -36,7 +36,9 @@ body {
   width: 240px;
   font-size: 90px;
   text-align: center;
-  background-color: #f4edea;
+
+  /* change color inside input */
+  /* background-color: #f4edea; */
   color: #12263a;
 }
 
@@ -44,20 +46,26 @@ body {
   border: none;
   font-size: 36px;
   cursor: pointer;
-  color: #f4d1ae;
+  background: white;
+
+  /* change color inside iccon button */
+  /* color: #f4d1ae; */
   margin-left: 8px;
 }
-#reset {
+/* #reset {
   color: #12263a;
-}
+} */
 
-.control-play-stop :nth-child(-n + 2):hover {
+/* .control-play-stop :nth-child(-n + 2):hover {
   color: #12263a;
-}
+} */
 
 .timer button:focus {
   outline: none;
 }
+/* .duration {
+  background-color: #12263a;
+} */
 
 .timer input:focus {
   outline: none;
@@ -72,4 +80,27 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+/* glass efect */
+.wrapper-timer {
+  background: white;
+  min-height: 60vh;
+  width: 60vh;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+}
+.control-play-stop {
+  margin-top: 1rem;
+
+  /* background-color: #12263a; */
+  /* display: flex; */
+}
+.control-play-stop > button {
+  border: none;
 }
