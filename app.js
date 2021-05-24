@@ -17,43 +17,36 @@ let duration = 0;
 let currentOffset = 0;
 let paused = false;
 //draw the full circle
-const timer = new Timer(
-  durationInput,
-  startButton,
-  pauseButton,
-  resetButton,
-  paused,
-  {
-    onStart(timeStart) {
-      duration = timeStart;
-    },
-    onTick() {
-      //calculate currentofset for matching for each tick.
-      currentOffset = (perimeter * timer.timeRemaining) / duration - perimeter;
-      //set limit to 3/4 of pertimer and if currentoffset is grather than 70% perimter change color to navy-blue
-      let limit = perimeter * 0.7;
-      if (Math.abs(currentOffset) > limit) {
-        circle.setAttribute("stroke", "#12263a");
-      }
+const timer = new Timer(durationInput, startButton, pauseButton, resetButton, paused, {
+  onStart(timeStart) {
+    duration = timeStart;
+  },
+  onTick() {
+    //calculate currentofset for matching for each tick.
+    currentOffset = (perimeter * timer.timeRemaining) / duration - perimeter;
+    //set limit to 3/4 of pertimer and if currentoffset is grather than 70% perimter change color to navy-blue
+    let limit = perimeter * 0.7;
+    if (Math.abs(currentOffset) > limit) {
+      circle.setAttribute("stroke", "#F7455C");
+    }
 
-      //set atribute to stroke-dashoffset with current stroke-dashoffset.
-      circle.setAttribute("stroke-dashoffset", currentOffset);
-    },
-    onComplete() {
-      console.log("time has complete.");
-      //circle.setAttribute("stroke-dasharray", perimeter);
-      //circle.setAttribute("stroke-dashoffset", 0);
-    },
-    onPause() {
-      console.log("stop  timer");
-    },
-    onResume() {
-      timer.tick();
-      this.interval = setInterval(this.tick, 20);
-    },
-    onReset() {
-      //quick fix about strange behavior stroke-dashoffset cvs at reset.
-      location.reload(); //reload the page.
-    },
-  }
-);
+    //set atribute to stroke-dashoffset with current stroke-dashoffset.
+    circle.setAttribute("stroke-dashoffset", currentOffset);
+  },
+  onComplete() {
+    console.log("time has complete.");
+    //circle.setAttribute("stroke-dasharray", perimeter);
+    //circle.setAttribute("stroke-dashoffset", 0);
+  },
+  onPause() {
+    console.log("stop  timer");
+  },
+  onResume() {
+    timer.tick();
+    this.interval = setInterval(this.tick, 20);
+  },
+  onReset() {
+    //quick fix about strange behavior stroke-dashoffset cvs at reset.
+    location.reload(); //reload the page.
+  },
+});
